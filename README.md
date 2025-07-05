@@ -23,4 +23,4 @@ Design
 
 - 2 joined arches with attachment loops on the ends
 
-![Rendered handle](DogHandle.png)
+![Rendered handle](DogBag.png)
