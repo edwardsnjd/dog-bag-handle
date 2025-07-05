@@ -1,9 +1,9 @@
 $fa = 1;
 $fs = 0.5;
 
-archWidth = 96;
+archWidth = 114;
 archHeight = 56;
-archThickness = 8;
+archThickness = 9;
 
 archesOffset = 11;
 
@@ -16,9 +16,11 @@ union() {
         arch(archWidth, archHeight, archThickness);
 
     translate([archWidth/2, 0, 0])
-        rotate([180, 0, 0]) loop(loopDiameter, archesOffset, archesOffset);
+        rotate([180, 0, 0])
+            loop(loopDiameter, archesOffset, archesOffset);
     translate([-archWidth/2, 0, 0])
-        rotate([180, 0, 0]) loop(loopDiameter, archesOffset, archesOffset);
+        rotate([180, 0, 0])
+            loop(loopDiameter, archesOffset, archesOffset);
 }
 
 // 3D square profile arch
@@ -49,7 +51,7 @@ module arc(width, height, thickness) {
 
 // 3D connection loop
 module loop(diameter, width, height) {
-    rotate_extrude(angle = 180, start=0, convexity = 2) {
-        translate([width/2, 0, 0]) circle(diameter/2);
-    }
+    rotate_extrude(angle = 180, start=0, convexity = 2)
+        translate([width/2, 0, 0])
+            circle(diameter/2);
 }
